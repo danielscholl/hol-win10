@@ -15,13 +15,16 @@ Open an RDP Session to the Lab Virtual Machine then download and execute the set
 
 __Setup the Lab Workstation:__
 
+Execute the following commands at a Powershell (Administrator) prompt.
 ```powershell
-curl https://raw.githubusercontent.com/danielscholl/hol-win10/master/install.ps1 -o install.ps1
-powershell -Command "Start-Process install.ps1"
+Add-LocalGroupMember -Group "docker-users" -Member $env:UserName
 ```
+
+Using the store install Debian
 
 __Setup WSL:__
 
+Execute the following commands at a debian bash prompt.
 ```bash
 curl https://raw.githubusercontent.com/danielscholl/hol-win10/master/setup.sh | bash
 ```
