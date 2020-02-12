@@ -13,9 +13,15 @@ __Create a Lab Machine:__
 
 Open an RDP Session to the Lab Virtual Machine then download and execute the setup script.
 
-__Setup the Lab Server:__
+__Setup the Lab Workstation:__
 
 ```powershell
-curl https://raw.githubusercontent.com/danielscholl/hol-win10/master/setup.ps1 -o setup.ps1
-powershell -Command "Start-Process setup.ps1"
+curl https://raw.githubusercontent.com/danielscholl/hol-win10/master/install.ps1 -o install.ps1
+powershell -Command "Start-Process install.ps1"
+```
+
+__Setup WSL:__
+
+```bash
+curl https://raw.githubusercontent.com/danielscholl/hol-win10/master/setup.sh | bash
 ```
