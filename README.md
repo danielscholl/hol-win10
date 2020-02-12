@@ -20,11 +20,13 @@ Execute the following commands at a Powershell (Administrator) prompt.
 Add-LocalGroupMember -Group "docker-users" -Member $env:UserName
 ```
 
-Using the store install Debian
+Using the store install Ubuntu or Debian
 
 __Setup WSL:__
 
-Execute the following commands at a debian bash prompt.
+Execute the following commands at a bash prompt.
 ```bash
-curl https://raw.githubusercontent.com/danielscholl/hol-win10/master/setup.sh | bash
+sudo apt update
+sudo apt install curl
+curl https://raw.githubusercontent.com/danielscholl/hol-win10/master/setup.sh | sudo bash
 ```
