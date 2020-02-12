@@ -1,20 +1,17 @@
-#Install Chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force
+
+
+#Install Chocolatey
 Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 #Assign Packages to Install
-$Packages = 'visualstudiocode', 'docker-desktop', 'azure-cli', 'wsl-ubuntu-1804'
+$Packages = 'visualstudiocode', 'docker-desktop'
 
 #Install Packages
 ForEach ($PackageName in $Packages)
 {choco install $PackageName -y}
 
-# Install AzureRM Powershell Module
-Install-Module -Name Azure -Repository PSGallery -Force -AllowClobber
-Import-Module -Name Azure
-
-Install-Module -Name Az -Repository PSGallery -Force -AllowClobber
-Import-Module -Name Az
+Add-LocalGroupMember -Group "docker-users" -Member "azureUser"
 
 #Reboot
 Restart-Computer
