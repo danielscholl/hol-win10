@@ -1,6 +1,6 @@
 sudo apt update
-sudo apt install software-properties-common python3 python3-venv python3-pip
-sudo apt install vim git
+sudo apt install -y software-properties-common python3 python3-venv python3-pip
+sudo apt install -y vim git
 
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
