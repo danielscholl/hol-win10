@@ -16,9 +16,11 @@ Open an RDP Session to the Lab Virtual Machine then download and execute the set
 __Setup the Lab Workstation:__
 
 - Enable WSL Windows Feature  (Requires Reboot)  
+
     `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
     
 - Install Postman  
+
     `choco install postman`
 
 - Start Docker-Desktop  
