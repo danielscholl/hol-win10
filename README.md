@@ -39,4 +39,8 @@ __Setup the Lab Workstation:__
     sudo apt update
     sudo apt install curl
     curl https://raw.githubusercontent.com/danielscholl/hol-win10/master/setup.sh | sudo bash
+    
+    # Modify the bashrc file
+    echo "export PATH="$PATH:$HOME/.local/bin" >> ~/.bashrc
+    echo "export DOCKER_HOST=tcp://localhost:2375" >> ~/.bashrc
     ```
