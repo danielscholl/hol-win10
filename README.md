@@ -21,7 +21,7 @@ __Setup the Lab Workstation:__
 - Install Postman  
     `choco install postman`
 
-- Start Docker-Desktop
+- Start Docker-Desktop  
    If the default user was changed add the user to the group  
     `Add-LocalGroupMember -Group "docker-users" -Member $env:UserName`
     
