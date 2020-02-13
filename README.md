@@ -26,8 +26,8 @@ __Setup the Lab Workstation:__
     `Add-LocalGroupMember -Group "docker-users" -Member $env:UserName`
     
    In Docker Settings enable the following settings.  
-        1. Start Docker Desktop when you login
-        1. Expose Daemon on tcp://localhost:2375 without TLS
+        1. Start Docker Desktop when you login  
+        2. Expose Daemon on tcp://localhost:2375 without TLS. 
 
 - Using the Store Install Debian and execute the following commands from the bash prompt.
     ```bash
