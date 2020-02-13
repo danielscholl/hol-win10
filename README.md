@@ -22,10 +22,10 @@ __Setup the Lab Workstation:__
     `choco install postman`
 
 - Start Docker-Desktop
-   If the default user was changed add the user to the group
+   If the default user was changed add the user to the group  
     `Add-LocalGroupMember -Group "docker-users" -Member $env:UserName`
     
-   In Docker Settings enable the following settings.
+   In Docker Settings enable the following settings.  
         1. Start Docker Desktop when you login
         1. Expose Daemon on tcp://localhost:2375 without TLS
 
