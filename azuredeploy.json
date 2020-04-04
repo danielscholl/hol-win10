@@ -158,7 +158,8 @@
               "version": "latest"
             },
             "osDisk": {
-              "createOption": "FromImage"
+              "createOption": "FromImage",
+              "diskSizeGB": 2048
             }
           },
           "networkProfile": {
