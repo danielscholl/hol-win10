@@ -8,6 +8,8 @@ $Packages = `
     'git-fork', `
     'microsoft-edge', `
     'visualstudiocode', `
+    'adoptopenjdk8', `
+    'intellijidea-community', `
     'docker-desktop'
 
 
