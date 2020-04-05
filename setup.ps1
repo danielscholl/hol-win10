@@ -9,7 +9,8 @@ $Packages = `
     'visualstudiocode', `
     'dotnetcore-sdk', `
     'intellijidea-community', `
-    'docker-desktop'
+    'docker-desktop', `
+    'powershell-core'
 
 
 #Install Packages
