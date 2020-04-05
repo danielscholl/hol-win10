@@ -7,14 +7,17 @@ $Packages = `
     'git', `
     'microsoft-edge', `
     'visualstudiocode', `
+    'dotnetcore-sdk', `
     'intellijidea-community', `
-    'microsoft-windows-terminal', `
     'docker-desktop'
 
 
 #Install Packages
 ForEach ($PackageName in $Packages)
 {choco install $PackageName -y}
+
+# Add User to Docker Group
+Add-LocalGroupMember -Group "docker-users" -Member "azureuser"
 
 #Install Azure PowerShell
 Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
@@ -30,7 +33,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile ~/Ubuntu.appx -UseBasicParsing
 Add-AppxPackage -Path ~/Ubuntu.appx
 
-Add-LocalGroupMember -Group "docker-users" -Member "azureuser"
+
 
 #Bring down Desktop Shortcuts
 $zipDownload = "https://github.com/danielscholl/hol-win10/blob/master/shortcuts.zip?raw=true"
@@ -41,11 +44,11 @@ Invoke-WebRequest $zipDownload -OutFile $downloadedFile
 Add-Type -assembly "system.io.compression.filesystem"
 [io.compression.zipfile]::ExtractToDirectory($downloadedFile, $vmFolder)
 
-# Download Java JDK
+$terminal = "https://github.com/microsoft/terminal/releases/download/v0.10.781.0/Microsoft.WindowsTerminal_0.10.781.0_8wekyb3d8bbwe.msixbundle"
 $javaDownload = "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u242-b08/OpenJDK8U-jdk_x64_windows_hotspot_8u242b08.msi"
-$vmFolder = "C:\Users\Public\Desktop"
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Invoke-WebRequest $javaDownload -OutFile "C:\Users\Public\Desktop\java.msi"
+Invoke-WebRequest $terminal -OutFile "C:\Users\Public\Desktop\terminal.msixbundle"
 
 #Reboot
 Restart-Computer
