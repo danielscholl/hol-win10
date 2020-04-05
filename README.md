@@ -15,13 +15,6 @@ Open an RDP Session to the Lab Virtual Machine then download and execute the set
 
 __Setup the Lab Workstation:__
 
-- Install Windows Terminal
-
-    `choco install microsoft-windows-terminal`
-    
-- Install Postman  
-
-    `choco install postman`
 
 - Start Docker-Desktop  
 
@@ -34,13 +27,23 @@ __Setup the Lab Workstation:__
         1. Start Docker Desktop when you login  
         2. Expose Daemon on tcp://localhost:2375 without TLS. 
 
-- Using the Store Install Debian and execute the following commands from the bash prompt.
-    ```bash
-    sudo apt update
-    sudo apt install curl
-    curl https://raw.githubusercontent.com/danielscholl/hol-win10/master/setup.sh | sudo bash
-    
-    # Modify the bashrc file
-    echo "export PATH="$PATH:$HOME/.local/bin" >> ~/.bashrc
-    echo "export DOCKER_HOST=tcp://localhost:2375" >> ~/.bashrc
-    ```
+
+- Install Terminal
+
+    - Using the Shortcut on the Desktop Install Windows Terminal
+
+- Install and configure WSL
+
+    - Using the Shortcut on the Desktop Install Ubuntu
+
+    - Execute the following commands from the bash prompt.
+
+        ```bash
+        sudo apt update
+        sudo apt install curl
+        curl https://raw.githubusercontent.com/danielscholl/hol-win10/master/setup.sh | sudo bash
+        
+        # Modify the bashrc file
+        echo "export PATH="$PATH:$HOME/.local/bin" >> ~/.bashrc
+        echo "export DOCKER_HOST=tcp://localhost:2375" >> ~/.bashrc
+        ```

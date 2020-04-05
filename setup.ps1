@@ -33,6 +33,11 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile ~/Ubuntu.appx -UseBasicParsing
 Add-AppxPackage -Path ~/Ubuntu.appx
 
+# Download AdoptOpenJDK
+Invoke-WebRequest https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u242-b08/OpenJDK8U-jdk_x64_windows_hotspot_8u242b08.msi -OutFile ~/Java.msi -UseBasicParsing
+
+# Download Windows Terminal
+Invoke-WebRequest https://github.com/microsoft/terminal/releases/download/v0.10.781.0/Microsoft.WindowsTerminal_0.10.781.0_8wekyb3d8bbwe.msixbundle -OutFile ~/Terminal.msixbundle -UseBasicParsing
 
 
 #Bring down Desktop Shortcuts
@@ -43,12 +48,6 @@ $vmFolder = "C:\Users\Public\Desktop"
 Invoke-WebRequest $zipDownload -OutFile $downloadedFile
 Add-Type -assembly "system.io.compression.filesystem"
 [io.compression.zipfile]::ExtractToDirectory($downloadedFile, $vmFolder)
-
-$terminal = "https://github.com/microsoft/terminal/releases/download/v0.10.781.0/Microsoft.WindowsTerminal_0.10.781.0_8wekyb3d8bbwe.msixbundle"
-$javaDownload = "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u242-b08/OpenJDK8U-jdk_x64_windows_hotspot_8u242b08.msi"
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest $javaDownload -OutFile "C:\Users\Public\Desktop\java.msi"
-Invoke-WebRequest $terminal -OutFile "C:\Users\Public\Desktop\terminal.msixbundle"
 
 #Reboot
 Restart-Computer
