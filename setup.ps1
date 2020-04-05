@@ -41,5 +41,11 @@ Invoke-WebRequest $zipDownload -OutFile $downloadedFile
 Add-Type -assembly "system.io.compression.filesystem"
 [io.compression.zipfile]::ExtractToDirectory($downloadedFile, $vmFolder)
 
+# Download Java JDK
+$javaDownload = "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u242-b08/OpenJDK8U-jdk_x64_windows_hotspot_8u242b08.msi"
+$vmFolder = "C:\Users\Public\Desktop"
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+Invoke-WebRequest $javaDownload -OutFile "C:\Users\Public\Desktop\java.msi"
+
 #Reboot
 Restart-Computer

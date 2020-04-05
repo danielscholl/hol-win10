@@ -1,4 +1,4 @@
-# Hands-On-Lab Windows 10 Machine
+# Windows 10 Developer Machine
 
 
 __Create a Lab Machine:__
@@ -15,9 +15,9 @@ Open an RDP Session to the Lab Virtual Machine then download and execute the set
 
 __Setup the Lab Workstation:__
 
-- Enable WSL Windows Feature  (Requires Reboot)  
+- Install Windows Terminal
 
-    `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
+    `choco install microsoft-windows-terminal`
     
 - Install Postman  
 
