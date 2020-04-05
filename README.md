@@ -28,9 +28,26 @@ __Setup the Lab Workstation:__
         2. Expose Daemon on tcp://localhost:2375 without TLS. 
 
 
-- Install Terminal
+- Install and configure Terminal
 
     - Using the Shortcut on the Desktop Install Windows Terminal
+
+    - Execute the following commands in Powershell core.
+
+        ```
+        Install-Module posh-git -Scope CurrentUser
+        Install-Module oh-my-posh -Scope CurrentUser
+
+        notepad $PROFILE
+        ```
+
+    - Add the following to the profile
+
+        ```
+            Import-Module posh-git
+            Import-Module oh-my-posh
+            Set-Theme Paradox
+        ```
 
 - Install and configure WSL
 
@@ -42,8 +59,18 @@ __Setup the Lab Workstation:__
         sudo apt update
         sudo apt install curl
         curl https://raw.githubusercontent.com/danielscholl/hol-win10/master/setup.sh | sudo bash
-        
-        # Modify the bashrc file
-        echo "export PATH=/"$PATH:$HOME/.local/bin/"" >> ~/.bashrc
-        echo "export DOCKER_HOST=tcp://localhost:2375" >> ~/.bashrc
+    
+        ```
+
+    - Install golang using g
+
+        ```bash
+        curl -sSL https://git.io/g-install | sh -s
+        ```
+
+    - Install terraform tfenv
+
+        ```bash
+        git clone https://github.com/tfutils/tfenv.git ~/.tfenv
+        ln -s ~/.tfenv/bin/* /usr/local/bin
         ```
