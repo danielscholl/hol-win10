@@ -5,11 +5,10 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object
 #Assign Chocolatey Packages to Install
 $Packages = `
     'git', `
-    'git-fork', `
     'microsoft-edge', `
     'visualstudiocode', `
-    'adoptopenjdk8', `
     'intellijidea-community', `
+    'microsoft-windows-terminal', `
     'docker-desktop'
 
 
