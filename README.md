@@ -9,6 +9,7 @@ A Windows 10 Developer Machine to use for Software Development fully configured 
 1. Windows Subsystem Linux
 1. Dotnet Core SDK
 1. Powershell Core
+1. Maven
 1. IntelliJ - Community
 1. AdoptOpenJDK 8 _(Ready to Install)_
 1. Windows Terminal _(Ready to Install)_
