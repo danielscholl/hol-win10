@@ -12,16 +12,16 @@ __Create a Lab Machine:__ _(30 Minutes)_
 __Installed Software__
 
 1. Git
-2. Edge
-3. Visual Studio Code
-4. Docker
-5. IntelliJ - Community
-6. AdoptOpenJDK 8 _(Ready to Install)_
-7. Dotnet Core SDK
-8. Powershell Core
-9. Windows Terminal _(Ready to Install)_
-10. Windows Subsystem Linux
-11. Ubuntu
+1. Edge
+1. Visual Studio Code
+1. Docker
+1. Windows Subsystem Linux
+1. Dotnet Core SDK
+1. Powershell Core
+1. IntelliJ - Community
+1. AdoptOpenJDK 8 _(Ready to Install)_
+1. Windows Terminal _(Ready to Install)_
+1. Ubuntu _(Ready to Install)_
 
 
 
