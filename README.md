@@ -9,12 +9,25 @@ __Create a Lab Machine:__ _(30 Minutes)_
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
+__Installed Software__
+
+1. Git
+2. Edge
+3. Visual Studio Code
+4. Docker
+5. IntelliJ - Community
+6. AdoptOpenJDK 8 _(Ready to Install)_
+7. Dotnet Core SDK
+8. Powershell Core
+9. Windows Terminal _(Ready to Install)_
+10. Windows Subsystem Linux
+11. Ubuntu
+
 
 
 Open an RDP Session to the Virtual Machine to perform the remaining setup and configuration.
 
-__Setup the Lab Workstation:__
-
+__Setup the Workstation:__
 
 - Start Docker-Desktop
 
