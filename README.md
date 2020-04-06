@@ -10,11 +10,8 @@ __Create a Lab Machine:__ _(30 Minutes)_
 </a>
 
 
-> RDP to the Lab Virtual Machine for the remaining Instructions
 
----------------------------------------------------------------
-
-Open an RDP Session to the Lab Virtual Machine then download and execute the setup script.
+Open an RDP Session to the Virtual Machine to perform the remaining setup and configuration.
 
 __Setup the Lab Workstation:__
 
