@@ -62,15 +62,29 @@ __Setup the Lab Workstation:__
     
         ```
 
+    - Install terraform tfenv
+
+        ```bash
+        git clone https://github.com/tfutils/tfenv.git ~/.tfenv
+        ln -s ~/.tfenv/bin/* ~/.local/bin
+        ```
+
     - Install golang using g
 
         ```bash
         curl -sSL https://git.io/g-install | sh -s
         ```
 
-    - Install terraform tfenv
+    - Setup Prompt
 
         ```bash
-        git clone https://github.com/tfutils/tfenv.git ~/.tfenv
-        ln -s ~/.tfenv/bin/* /usr/local/bin
+        go get -u github.com/justjanne/powerline-go
+
+        # Add the following to bash prompt
+        function _update_ps1() {
+            PS1="$($GOPATH/bin/powerline-go -error $?)"
+        }
+        if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
+            PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+        fi
         ```
