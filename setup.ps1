@@ -9,6 +9,7 @@ $Packages = `
   'visualstudiocode', `
   'dotnetcore-sdk', `
   'intellijidea-community', `
+  'maven', `
   'docker-desktop', `
   'powershell-core', `
   'cascadiacode'

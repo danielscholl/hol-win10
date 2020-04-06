@@ -148,7 +148,7 @@ __Configure the Workstation:__ _(30 Minutes)_
     curl https://raw.githubusercontent.com/danielscholl/hol-win10/master/setup.sh | sudo bash
     ```
 
-  - Install terraform tfenv
+  - Install terraform using tfenv
 
     ```bash
     git clone https://github.com/tfutils/tfenv.git ~/.tfenv
@@ -172,7 +172,7 @@ __Configure the Workstation:__ _(30 Minutes)_
     ```bash
     go get -u github.com/justjanne/powerline-go
 
-    # Add the following to bash prompt
+    # Add the following to .bashrc to modify prompt
     function _update_ps1() {
         PS1="$($GOPATH/bin/powerline-go -error $?)"
     }

@@ -31,4 +31,4 @@ sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
 sudo apt update
 sudo apt install adoptopenjdk-8-hotspot  # Java 8 / HotSpot VM
 
-mkdir ~/.local/bin
+mkdir -p ~/.local/bin
