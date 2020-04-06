@@ -51,7 +51,6 @@ __Setup the Lab Workstation:__
           "profiles": {
             "list": [
               {
-                // Make changes here to the powershell.exe profile
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "name": "Windows PowerShell",
                 "fontFace":  "Cascadia Code PL",
