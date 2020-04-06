@@ -3,20 +3,14 @@ sudo apt install -y software-properties-common python3 python3-venv python3-pip
 apt-get install -y ca-certificates curl apt-transport-https lsb-release gnupg
 sudo apt install -y vim git wget unzip direnv
 
-# Download and install homebrew
-# sudo apt install -y linuxbrew-wrapper
-# echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >>~/.bash_profile
-# echo 'export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"' >>~/.bash_profile
-# echo 'export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"' >>~/.bash_profile
-
 # Download and install the Microsoft signing key
-curl -sL https://packages.microsoft.com/keys/microsoft.asc | 
-    gpg --dearmor | 
+curl -sL https://packages.microsoft.com/keys/microsoft.asc |
+    gpg --dearmor |
     sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
 
 # Add the Azure CLI software repository
 AZ_REPO=$(lsb_release -cs)
-echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | 
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" |
     sudo tee /etc/apt/sources.list.d/azure-cli.list
 
 # Update repository information and install the azure-cli package
@@ -27,7 +21,7 @@ apt-get install azure-cli -y
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 sudo curl -L "https://github.com/docker/compose/releases/download/1.25.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose 
+sudo chmod +x /usr/local/bin/docker-compose
 echo 'export PATH=$PATH:$HOME/.local/bin' >> ~/.bashrc
 echo 'export DOCKER_HOST=tcp://localhost:2375' >> ~/.bashrc
 
