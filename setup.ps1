@@ -4,19 +4,19 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object
 
 # Assign Chocolatey Packages to Install
 $Packages = `
-    'git', `
-    'microsoft-edge', `
-    'visualstudiocode', `
-    'dotnetcore-sdk', `
-    'intellijidea-community', `
-    'docker-desktop', `
-    'powershell-core', `
-    'cascadiacode'
+  'git', `
+  'microsoft-edge', `
+  'visualstudiocode', `
+  'dotnetcore-sdk', `
+  'intellijidea-community', `
+  'docker-desktop', `
+  'powershell-core', `
+  'cascadiacode'
 
 
 # Install Packages
 ForEach ($PackageName in $Packages)
-{choco install $PackageName -y}
+{ choco install $PackageName -y }
 
 # Add User to Docker Group
 Add-LocalGroupMember -Group "docker-users" -Member "azureuser"
@@ -41,6 +41,8 @@ Invoke-WebRequest https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/dow
 # Download Windows Terminal
 Invoke-WebRequest https://github.com/microsoft/terminal/releases/download/v0.10.781.0/Microsoft.WindowsTerminal_0.10.781.0_8wekyb3d8bbwe.msixbundle -OutFile ~/Terminal.msixbundle -UseBasicParsing
 
+# Download Cascadia Font
+Invoke-WebRequest https://github.com/microsoft/cascadia-code/releases/download/v1911.21/CascadiaPL.ttf -Outfile ~/CascadiaPL.ttf -UseBasicParsing
 
 # Bring down Desktop Shortcuts
 $zipDownload = "https://github.com/danielscholl/hol-win10/blob/master/shortcuts.zip?raw=true"
