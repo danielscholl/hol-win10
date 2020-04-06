@@ -1,6 +1,6 @@
 # Windows 10 Developer Machine
 
-A Windows 10 Developer Machine to use for Software Development
+A Windows 10 Developer Machine to use for Software Development fully configured in under 1 hour.
 
 1. Git
 1. Edge
@@ -14,7 +14,7 @@ A Windows 10 Developer Machine to use for Software Development
 1. Windows Terminal _(Ready to Install)_
 1. Ubuntu _(Ready to Install)_
 
-__Create a Lab Machine:__ _(30 Minutes)_
+__Create the Workstation:__ _(30 Minutes)_
 
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdanielscholl%2Fhol-win10%2Fmaster%2Fazuredeploy.json" target="_blank">
@@ -24,7 +24,7 @@ __Create a Lab Machine:__ _(30 Minutes)_
 
 Open an RDP Session to the Virtual Machine to perform the remaining setup and configuration.
 
-__Setup the Workstation:__
+__Configure the Workstation:__ _(30 Minutes)_
 
 - Start Docker-Desktop
 
