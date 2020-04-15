@@ -8,7 +8,7 @@ $Packages = `
   'microsoft-edge', `
   'visualstudiocode', `
   'dotnetcore-sdk', `
-  'intellijidea-community', `
+  'intellijidea-community --version=2019.3.4', `
   'maven', `
   'docker-desktop', `
   'powershell-core', `
