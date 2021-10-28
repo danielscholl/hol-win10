@@ -90,7 +90,7 @@ __Configure the Workstation:__ _(30 Minutes)_
         # Add the following to the profile
         Import-Module posh-git
         Import-Module oh-my-posh
-        Set-Theme Paradox
+        Set-PoshPrompt Paradox
         ```
 
 
